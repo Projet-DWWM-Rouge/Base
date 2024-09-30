@@ -1,0 +1,42 @@
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .ajouter{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Tableau */
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            width: 80%;
+            text-align: center;
+            
+        }
+        thead{
+            background-color: rgb(8, 109, 156);
+        }
+        tbody{
+            background-color: rgb(106, 176, 206);
+        }
+        tfoot {
+            background-color: rgb(228 240 245);
+        }
+
+        th {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 8px 10px;
+        }
+        td {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 8px 10px;
+        }

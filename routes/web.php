@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\rouge\Controllers\FluxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// ROUTE ACCUEIL
 Route::get('/', function () {
     //return view('welcome');
-    return view('backOffice/tableauDeBord');
-});
+    return view('rouge.backOffice.tableauDeBord');
+    //return view('backOffice/vueActualite');
+})->name('dashboard');
 
-Route::get('/tableauDeBord', function () {
-    return view('backOffice/tableauDeBord');
-});
+//ROUTE ACCUEIL BACKOFFICE
+Route::get('/admin', function () {
+    return view('rouge.backOffice.tableauDeBord');
+})->name('admin');
+
+
+
+
 
 //->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -32,3 +41,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/webrouge.php';
