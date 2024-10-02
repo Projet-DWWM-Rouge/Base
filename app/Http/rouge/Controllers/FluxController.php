@@ -96,4 +96,17 @@ class FluxController extends Controller
         $fluxRss->delete();
         return redirect()->route('actu.admin.index')->with('success','Actualité supprimé');
     }
+
+
+    public function afficherFlux($nom_flux = "Sport")
+    {
+
+        $fluxRss = FluxRss::where("nom_flux",'=',$nom_flux)->first();
+        $lesFlux = FluxRss::all()->toArray();
+        $url = $fluxRss->url_flux;
+        $flux = simplexml_load_file($url);
+
+
+        return view('rouge.frontOffice.vueActualiteFront', compact('flux','lesFlux'));
+    }
 }

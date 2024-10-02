@@ -17,7 +17,7 @@
                 <h5 class="card-title">{{ $title ?? "Groupe Rouge" }}</h5>
                 <h6 class="card-text">Mathieu, Rafik, Salah, Jossuah </h6>
                 <a class="btn btn-outline-dark" href="{{ route('actu.admin.index') }}" style="width: 80%">Actualité</a>
-                <a href="" class="btn btn-outline-dark" style="width: 80%">Autre</a>
+                <a href="/actu " class="btn btn-outline-dark" style="width: 80%">Autre</a>
                 <a href="" class="btn btn-outline-dark" style="width: 80%">Autre</a>
                 @isset($button)
                 @endisset

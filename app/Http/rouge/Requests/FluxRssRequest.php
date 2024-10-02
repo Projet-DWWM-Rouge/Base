@@ -23,8 +23,8 @@ class FluxRssRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "nom_flux"  => ['required'],
-            "url_flux"  => ['required','url'],
+            "nom_flux"  => 'required|unique:flux_rss',
+            "url_flux"  => 'required|unique:flux_rss|url',
         ];
     }
 }
