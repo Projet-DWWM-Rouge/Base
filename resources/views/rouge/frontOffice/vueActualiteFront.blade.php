@@ -1,23 +1,7 @@
 @extends('layouts.backOffice')
 @section('content')
-<style>
-    .card-img-left {
-        height: auto;
-        max-width: 300px;
-        object-fit: cover;
-    }
+@vite(['resources/css/styleVueActualiteFront.css'])
 
-    .image-container {
-        flex: 0 0 auto;
-        width: 300px;
-    }
-
-    @media (max-width: 576px) {
-        .image-container {
-            width: 100px;
-        }
-    }
-</style>
 
 <div class="container" style="margin: 2% ; display: flex; align-items: center; justify-content: center;">
 
@@ -57,7 +41,7 @@
                         <div class="card-body text-start">
                             <h5 class="card-title" style="margin-bottom: 2%" ;>"{{$flu->title}}"</h5>
                             <p class="card-text">"{{ $cleandescription }}"</p>
-                            <a href="{{$flu->link}}" class="btn btn-primary">Voir l'article</a>
+                            <a href="{{$flu->link}}" target="_blank" class="btn btn-primarou">Voir l'article</a>
                         </div>
                     </div>
                 </div>

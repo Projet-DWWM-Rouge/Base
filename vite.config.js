@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/styleTableauDeBord.css',
                 'resources/css/styleVueActualite.css',
                 'resources/css/styleVueActualiteCrud.css',
+                'resources/css/styleVueActualiteFront.css',
                 'resources/js/app.js',
             ],
             refresh: true,

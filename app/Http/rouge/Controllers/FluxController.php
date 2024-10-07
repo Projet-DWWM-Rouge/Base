@@ -109,4 +109,15 @@ class FluxController extends Controller
 
         return view('rouge.frontOffice.vueActualiteFront', compact('flux','lesFlux'));
     }
+
+    public function apiFlux($nom_flux = "Sport")
+    {
+        $fluxRss = FluxRss::where("nom_flux",'=',$nom_flux)->first();
+        $lesFlux = FluxRss::all()->toArray();
+        $url = $fluxRss -> url_flux;
+        $flux = simplexml_load_file($url);
+        $api =  json_encode($flux);
+
+        return view('rouge.fronOffice.vueActualiteApi', compact('api'));
+    }
 }
